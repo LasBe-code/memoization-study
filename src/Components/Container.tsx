@@ -7,12 +7,13 @@ export const Container = ({ children }: PropType) => {
       style={{
         display: 'flex',
         justifyContent: 'center',
-        borderRadius: '1rem',
-        boxShadow: '0 2rem 5rem 0.1rem gray',
+        border: '1px solid rgba(255, 255, 255, 0.18)',
+        borderRadius: '10px',
+        boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
         margin: '3rem auto',
         padding: '3rem',
-        width: '80%',
-        maxWidth: '50rem',
+        maxWidth: '30rem',
+        backdropFilter: 'blur(3px)',
       }}
     >
       {children}

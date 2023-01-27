@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import { useCallback, useMemo, useState } from 'react';
 
 type PropType = {

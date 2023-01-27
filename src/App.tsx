@@ -1,14 +1,24 @@
 /* eslint-disable */
 import './App.css';
-import { Immutable } from './pages/immutable';
-import { Parent } from './pages/renderTest/Parent';
-import { FalsyTruthy } from './pages/falsyTruthy';
-import { ConditionalRendering } from './pages/conditionalRendering';
+import { Immutable } from './pages/Immutable';
+import { Route, Routes } from 'react-router-dom';
+import { ConditionalRendering } from './pages/ConditionalRendering';
+import { FalsyTruthy } from './pages/FalsyTruthy';
+import { Parent } from './pages/RenderTest/Parent';
+import { UploadImage } from './pages/UploadImage';
+import { Glassmorphism } from './pages/Glassmorphism';
 
 function App() {
-  // return <Parent />;
-  // return <FalsyTruthy />;
-  return <ConditionalRendering />;
+  return (
+    <Routes>
+      <Route path="/conditionalRendering" element={<ConditionalRendering />} />
+      <Route path="/falsyTruthy" element={<FalsyTruthy />} />
+      <Route path="/immutable" element={<Immutable />} />
+      <Route path="/renderTest" element={<Parent />} />
+      <Route path="/uploadImage" element={<UploadImage />} />
+      <Route path="/glassmorphism" element={<Glassmorphism />} />
+    </Routes>
+  );
 }
 
 export default App;
