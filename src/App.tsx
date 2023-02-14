@@ -7,6 +7,7 @@ import { FalsyTruthy } from './pages/FalsyTruthy';
 import { Parent } from './pages/RenderTest/Parent';
 import { UploadImage } from './pages/UploadImage';
 import { Glassmorphism } from './pages/Glassmorphism';
+import { Memoization } from './pages/Memoization';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Route path="/renderTest" element={<Parent />} />
       <Route path="/uploadImage" element={<UploadImage />} />
       <Route path="/glassmorphism" element={<Glassmorphism />} />
+      <Route path="/memoization" element={<Memoization />} />
     </Routes>
   );
 }
