@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import './Glassmorphism.css';
-import { GlassContainer } from '../../Components/GlassContainer';
-import { GlassSagment } from '../../Components/GlassSagment';
-import { GlassButton } from '../../Components/GlassButton';
-import { GlassInput } from '../../Components/GlassInput';
+import { GlassButton } from '../../components/GlassButton';
+import { GlassContainer } from '../../components/GlassContainer';
+import { GlassInput } from '../../components/GlassInput';
+import { GlassSagment } from '../../components/GlassSagment';
 export const Glassmorphism = () => {
   const [inputState, setInputState] = useState<{ [idx: number]: string }>();
 

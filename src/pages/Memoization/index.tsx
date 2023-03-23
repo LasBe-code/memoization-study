@@ -1,5 +1,5 @@
 import { useCallback, useState } from 'react';
-import { GlassButton } from '../../Components/GlassButton';
+import { GlassButton } from '../../components/GlassButton';
 import React from 'react';
 
 type PropType = {
@@ -17,7 +17,7 @@ const Element = ({ data }: PropType) => {
   );
 };
 
-const MemoizationElement = React.memo(Element);
+// const MemoizationElement = React.memo(Element);
 
 export const Memoization = () => {
   const [state, setState] = useState<number[]>([0, 1]);
@@ -27,12 +27,12 @@ export const Memoization = () => {
       return [...prev, state[state.length - 1] + 1];
     });
   };
-  const mapElements = () => {
-    const dataList = state.map((data) => {
-      return <MemoizationElement data={data} key={data} />;
-    });
-    return dataList;
-  };
+  // const mapElements = () => {
+  //   const dataList = state.map((data) => {
+  //     return <MemoizationElement data={data} key={data} />;
+  //   });
+  //   return dataList;
+  // };
 
   const Element2 = useCallback(({ data }: PropType) => {
     console.log(data);

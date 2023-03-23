@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
-import { GlassButton } from '../../Components/GlassButton';
-import { GlassContainer } from '../../Components/GlassContainer';
+import { GlassButton } from '../../components/GlassButton';
+import { GlassContainer } from '../../components/GlassContainer';
 
 const FILE_SIZE_MAX_LIMIT = 1 * 1024 * 1024; // 5MB
 
@@ -9,6 +9,7 @@ export const UploadImage = () => {
   const [formState, setFormState] = useState<FormData>();
   const inputRef = useRef<HTMLInputElement | null>(null);
   const onChangeUploadImage = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(formState);
     if (!e.target.files?.length) return;
 
     if (e.target.files[0].size > FILE_SIZE_MAX_LIMIT) {
